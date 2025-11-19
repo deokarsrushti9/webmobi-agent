@@ -10,7 +10,7 @@ WM_PASSWORD = os.getenv("WM_PASSWORD")
 
 def test_event_creation():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, slow_mo=200)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
         page.goto("https://events.webmobi.com/")
